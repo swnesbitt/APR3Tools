@@ -1475,6 +1475,16 @@ def apr3plot3(filename,scan,band,fontsize=14,fontsize2=12,savefig=False,cmap = '
     return
 
 def apr3tocit(apr3filename,cit_awot_fl,sphere_size,query_k = 1,plotson=False):
+    
+    """
+    =================
+    
+    This function finds either the closest gate or averages over a number of gates (query_k) nearest to 
+    the citation aircraft in the radar volume of the APR3. It will return a dict of the original full length
+    arrays and the matched arrays. 
+    
+    =================
+    """
 
     cit_time = fl['time']['data']
     apr = apr3read(apr3filename)
